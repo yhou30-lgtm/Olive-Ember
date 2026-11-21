@@ -3,7 +3,7 @@
 export const R = {
   name: "Olive & Ember",
   tagline: "Modern American, cooked over fire",
-  url: "https://oliveandember.example",
+  url: "https://yhou30-lgtm.github.io/Olive-Ember",
   // Fictional details. 555-01xx phone numbers and the .example domain are reserved for fake use.
   address: ["123 Example Street", "Claremont, CA 91711"],
   phone: "(909) 555-0142",
