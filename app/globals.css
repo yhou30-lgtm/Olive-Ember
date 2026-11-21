@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-cream text-charcoal font-sans antialiased; }
+  h1, h2, h3 { @apply font-serif font-medium; }
+  :focus-visible { outline: 2px solid #5F6540; outline-offset: 3px; }
+}
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-page px-5 sm:px-8; }
+  .section { @apply py-20 sm:py-28; }
+  .eyebrow { @apply text-xs font-medium uppercase tracking-[0.22em] text-olive; }
+  .btn { @apply inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-medium transition-colors duration-300; }
+}
+
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+/* Slow flicker on the flame in the hero art */
+@keyframes flicker { 0%,100% { transform: scaleY(1) } 50% { transform: scaleY(1.04) } }
+.flame { transform-origin: 50% 100%; animation: flicker 3.2s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .flame { animation: none; }
+}
